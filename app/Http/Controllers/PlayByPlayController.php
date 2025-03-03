@@ -376,9 +376,9 @@ class PlayByPlayController extends Controller
     
     public function getPlayByPlay($scheduleId)
     {
-        // Fetch the play-by-play data from the play_by_play table
+        // Fetch the play-by-play data sorted by game_time
         $entries = PlayByPlay::where('schedule_id', $scheduleId)
-                            ->orderBy('created_at', 'asc')
+                            ->orderBy('game_time', 'desc')
                             ->get();
 
         // Debug the retrieved entries
