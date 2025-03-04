@@ -142,7 +142,7 @@ Route::middleware('auth')->group(function () {
     Route::get('/playerstats/{id}/edit', [PlayerStatsController::class, 'edit'])->name('playerstats.edit');
     Route::put('/playerstats/{id}', [PlayerStatsController::class, 'update'])->name('playerstats.update');
     Route::delete('/playerstats/{id}', [PlayerStatsController::class, 'destroy'])->name('playerstats.destroy');
-    Route::delete('/playbyplay/{id}/delete', [PlayByPlayController::class, 'deletePlayByPlay'])->name('playbyplay.delete');
+    Route::delete('/playbyplay/{id}', [PlayByPlayController::class, 'deletePlayByPlay'])->name('playbyplay.delete');
 
     Route::get('/playbyplay/{scheduleId}', [PlayByPlayController::class, 'getPlayByPlay'])->name('playbyplay.get');
 
