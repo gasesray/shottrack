@@ -6,7 +6,7 @@ use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Validator;
-use App\Models\teams;
+use App\Models\Teams;
 use App\Models\tournaments;
 use Spatie\Permission\Commands\UpgradeForTeams;
 
