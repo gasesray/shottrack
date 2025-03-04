@@ -25,7 +25,6 @@ Route::get('/tournaments', [TournamentController::class, 'index'])->name('tourna
 Route::get('/teams', [TeamController::class, 'index'])->name('teams.index');
 Route::get('/players', [PlayerController::class, 'index'])->name('players.index');
 Route::get('/schedules', [ScheduleController::class, 'index'])->name('schedules.index');
-Route::get('/schedules', [ScheduleController::class, 'index'])->name('schedules.index');
 Route::get('/playerstats', [PlayerStatsController::class, 'index'])->name('playerstats.index');
 Route::get('/teams-by-tournament', [TeamController::class, 'getByTournament'])->name('teams.by_tournament');
 Route::get('/team-stats', [TeamStatController::class, 'index'])->name('leaderboards.index');
