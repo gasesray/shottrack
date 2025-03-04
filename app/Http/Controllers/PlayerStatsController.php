@@ -6,7 +6,7 @@ use App\Models\Teams;
 use App\Models\Schedule;
 use App\Models\Players;
 use App\Models\PlayerStat;
-use App\Models\Tournaments;
+use App\Models\tournaments;
 use App\Models\PlayByPlay;
 use Illuminate\Support\Facades\Log;
 use Illuminate\Http\Request;
