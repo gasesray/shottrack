@@ -43,7 +43,7 @@ class ScheduleController extends Controller
             ->orderBy('date', 'asc')
             ->paginate(25);
 
-        $tournaments = tournaments::all(); 
+        $tournaments = Tournaments::all(); 
         $categories = $tournamentId ? $tournaments->where('id', $tournamentId)->pluck('category')->unique() : collect();
 
         return view('schedules.list', [
@@ -80,7 +80,7 @@ class ScheduleController extends Controller
     public function create(Request $request)
     {
         $tournamentId = $request->query('tournament_id');
-        $tournaments =  tournaments::all();
+        $tournaments = Tournaments::all();
         $teams = [];
 
         if ($tournamentId) {
@@ -157,7 +157,7 @@ class ScheduleController extends Controller
 
         // Fetch the tournament to check if it has categories
         $tournamentId = $request->input('tournament_id');
-        $tournament = tournaments::findOrFail($tournamentId);
+        $tournament = Tournaments::findOrFail($tournamentId);
         $hasCategories = $tournament->has_categories;
 
         // Create the new schedule
@@ -197,7 +197,7 @@ class ScheduleController extends Controller
      */
     public function edit(string $id)
     {
-        $tournaments = tournaments::all();
+        $tournaments = Tournaments::all();
         
         $schedule = Schedule::findOrFail($id);
 
@@ -223,7 +223,7 @@ class ScheduleController extends Controller
 
         // Find the tournament to check if it has categories
         $tournamentId = $request->input('tournament_id');
-        $tournament =  tournaments::findOrFail($tournamentId);
+        $tournament = Tournaments::findOrFail($tournamentId);
         $hasCategories = $tournament->has_categories;
 
         $validator = Validator::make($request->all(), [
@@ -525,7 +525,7 @@ class ScheduleController extends Controller
     public function bulkUploadForm()
     {
 
-        $tournaments = tournaments::all();
+        $tournaments = Tournaments::all();
 
         return view('schedules.upload', compact('tournaments')); 
     }
