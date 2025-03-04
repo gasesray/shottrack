@@ -5,7 +5,7 @@ namespace App\Http\Controllers;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Validator;
 use App\Models\Schedule;
-use App\Models\teams;
+use App\Models\Teams;
 use App\Models\tournaments;
 use App\Rules\Time12HourFormat;
 use App\Models\Score;
