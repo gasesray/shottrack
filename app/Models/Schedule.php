@@ -34,7 +34,7 @@ class Schedule extends Model
     // Define the relationship with the Tournament model
     public function tournament()
     {
-        return $this->belongsTo(Tournaments::class);
+        return $this->belongsTo(tournaments::class);
     }
 
     // Define the relationship with the first Team (team 1)
