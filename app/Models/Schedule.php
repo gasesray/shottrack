@@ -8,6 +8,10 @@ use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Validator;
 use App\Models\Teams;
 use App\Models\tournaments;
+use App\Models\Score;
+use App\Models\PlayerStat;
+use App\Models\TeamMetric;
+
 use Spatie\Permission\Commands\UpgradeForTeams;
 
 

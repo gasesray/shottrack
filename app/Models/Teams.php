@@ -5,6 +5,10 @@ namespace App\Models;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
 use App\Models\tournaments;
+use App\Models\Players;
+use App\Models\Score;
+use App\Models\TeamStat;
+use App\Models\TeamMetric;
 
 class Teams extends Model
 {
