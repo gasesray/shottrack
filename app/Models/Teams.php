@@ -4,6 +4,7 @@ namespace App\Models;
 
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
+use App\Models\tournaments;
 
 class Teams extends Model
 {
@@ -28,7 +29,7 @@ class Teams extends Model
      */
     public function tournament()
     {
-        return $this->belongsTo(Tournaments::class);
+        return $this->belongsTo( tournaments::class);
     }
     public function players()
     {
