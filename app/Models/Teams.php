@@ -31,7 +31,7 @@ class Teams extends Model
      */
     public function tournament()
     {
-        return $this->belongsTo( Tournaments::class);
+        return $this->belongsTo(Tournaments::class);
     }
     public function players()
     {
