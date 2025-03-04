@@ -4,7 +4,7 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Validator;
-use App\Models\teams;
+use App\Models\Teams;
 use App\Models\tournaments;
 use App\Imports\TeamsImport;
 use Maatwebsite\Excel\Facades\Excel;
