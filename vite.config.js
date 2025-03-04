@@ -11,4 +11,5 @@ export default defineConfig({
             refresh: true,
         }),
     ],
+    base: '/',  // Ensure assets are correctly referenced
 });
